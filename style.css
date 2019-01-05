@@ -1,6 +1,5 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
     background-color: #e6ecf0;
     margin: 0px;
     padding: 0px;
@@ -12,47 +11,54 @@ body {
 
 .filters {
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-
-.reset-button {
-    padding: 5px 10px;
-    margin: 15px;
-    border-radius: 10px;
-    font-family:'Roboto',sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color:#FFFFFF;
-    background-color:#4eb5f1;
-    text-align: center;        
-}
-
-.reset-button:hover {
-    background-color: #4095c6;
+    overflow: auto;
 }
 
 .search-input {
-    height: 30px;
-    border-radius: 5px;
-    padding: 5px;
+    height: auto;
+    width: auto;
+    padding: 15px;
+    margin: 35px 20px 35px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: 1px solid #f0eded;
+    border-radius: 1%;
+}
+
+.radio-button {
+    display: none;
+}
+
+.radio-img {
+    width: 40px;
+    height: auto;
+    margin: 0 5px;
+    border: 2px solid #ffffff;
+    padding: 8px;
+    border-radius: 3%;
+}
+
+.checked {
+    border: 2px solid #81b2dabd;
+}
+
+.sex-filter,
+.name-sort,
+.age-sort {
+    margin-top: 35px;
 }
 
 .main-header {
     width: 100%;
-    height: 50px;
+    height: 60px;
     margin-bottom: 10px;
     background-color: #ffffff;
     border-bottom: 1px solid #a8a8a8;
 }
 
-.second-heading {
-    font-size: 1.5em;
-}
-
 .main-heading {
     font-weight: bold;
-    font-size: 1.6em;
+    font-size: 2em;
     text-align: center;
     padding: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -61,25 +67,7 @@ body {
 
 .menu {
     background-color: #ffffff;
-    font-size: 1.3em;
-    color: #14171a;
     border-bottom: 1px solid #a8a8a8;
-}
-
-.menu-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.menu-item {
-    line-height: 1.7em;
-}
-
-.menu-item:hover {
-    color: #ffffff;
-    cursor: pointer;
 }
 
 .content-column {
@@ -93,7 +81,6 @@ body {
     border-bottom: 1px solid #a8a8a8;
 }
 
-
 .blocks {
     display: flex;
     width: 25%;
@@ -101,17 +88,15 @@ body {
     height: auto;
     margin-top: 20px;
     background-color: #ffffff;
-    border-left: 1px solid #e2e2e2;
-    border-top: 1px solid #e2e2e2;
-    border-right: 3px solid #e2e2e2;
-    border-bottom: 3px solid #e2e2e2;
+    border: 1px solid #ffffff;
     border-radius: 1%;
     text-align: center;
 }
 
 .blocks:hover {
     background-color: #fafafa;
-    border: 2px solid #62a9e0;
+    border: 1px solid #d3d3d3cc;
+    box-shadow: 0 0 10px #d3d3d3cc;
 }
 
 .user-card {
@@ -120,7 +105,6 @@ body {
 }
 
 .user-name {
-    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -131,17 +115,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 0.5em;
-    text-align: center;
-}
-
-.user-data {
-    font-style: italic;
 }
 
 .main-footer {
     width: 100%;
-    margin: 0px;
-    padding: 0px;
     margin-top: 10px;
     background-color: #62a9e0;
     height: 50px;
@@ -164,17 +141,20 @@ body {
         display: flex;
         flex-wrap: wrap;
         align-content: flex-start;
-        
-    }
-
-    .main-header {
-        width: 100%;
-        height: 50px;
     }
 
     .menu {
         width: 230px;
         margin-right: 10px;
+        max-height: 410px;
+    }
+
+    .radio-img {
+        margin: 0 5px;
+    }
+
+    .search-input {
+        width: 180px;
     }
 
     .content-column {
@@ -192,12 +172,12 @@ body {
 @media screen and (min-width: 1020px) {
     .wrapper {
         width: 1020px;
-        margin: 0 auto;
     }
 
     .menu {
         width: 300px;
         margin-right: 10px;
+        max-height: 420px;
     }
 
     .content-column {
@@ -222,7 +202,12 @@ body {
 
     .menu {
         width: 300px;
+        max-height: 420px;
         margin-right: 10px;
+    }
+
+    .search-input {
+        width: auto;
     }
 
     .content-column {
@@ -236,9 +221,10 @@ body {
     .blocks {
         width: 22.5%;
         height: auto;
+        max-height: 260px;
     }
 
     .user-card {
-        margin: 10px auto 0 auto;
+        margin: 30px auto 0 auto;
     }
 }
